@@ -1,0 +1,69 @@
+{% extends 'caddWebsite/base.html' %}
+
+{% load static %}
+{% block linkcss %}
+<link rel="stylesheet" href="{% static 'caddWebsiteMain/privacypolicy/privacypolicy.css' %}">
+{% endblock %}
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+<body>
+
+  <div class="cadd-pp-page">
+    <img class="cadd-pp-f" src="/media/caddWebsiteMain/privacypolicy/privacybanner.png" alt="" />
+    <div class="cadd-pp-space"><div class="space"></div>
+    <div class="cadd-pp-h">Privacy Policy</div>
+    <div class="cadd-pp-p">
+      CADD Centre considers the security and protection of your personal data and information important. Therefore, CADD Centre operates its website in compliance with applicable laws on data privacy protection and data security.
+    </div>
+    <div class="cadd-pp-p">
+            Below, we provide information on the types of data we collect through all CADD Centre websites, the purpose we use such data, and parties with which we share such data, where applicable.
+    </div>
+    
+    <div class="cadd-pp-h">Collected Data and Purpose of Processing</div>
+    <div class="cadd-pp-p">
+      We only collect personal data (e.g. Names, Country, Location, Telephone/ Mobile, Email ID, etc.) with regard to operating our website only when you voluntarily provided this data to us (e.g. through registration, contact inquiries, surveys, etc.) and we are entitled to use or process such data by virtue of permission granted by you on the basis of statutory provision.
+    </div>
+    <div class="cadd-pp-p">
+      As a general rule, we only use such data exclusively for the purpose for which the data was disclosed to us by you, such as to answer your inquiries, grant you access, process your orders, etc.
+    </div>
+    <div class="cadd-pp-h">
+      Data Sharing
+    </div>
+    <div class="cadd-pp-p">
+      For the purpose indicated above, insofar, as you have provided your consent, or when we are legally entitled to do so, we will share your personal data with the subsidiaries of CADD Centre, wherever required.
+    </div>
+    <div class="cadd-pp-p">
+      In connection with the operation of this website and the services offered CADD Centre works as a network of all its subdivisions such as DreamZone, Synergy, Livewire, CCUBE, IID, Skillease, One Channel, CADD at School and Dream Flower.
+    </div>
+    <div class="cadd-pp-p">
+      These Strategic Business units are located in and outside India, possibly, all over the Asia, in this regard; the applicability of data secrecy and protection laws may vary. In such cases, CADD Centre takes measures to ensure an appropriate level of data privacy and protection.
+    </div>
+    <div class="cadd-pp-p">
+      Data is shared only in compliance with the applicable laws and regulations. We do not sell or otherwise market your personal data to third parties.
+    </div>
+    <div class="cadd-pp-h">
+      Questions, Comments and Amendments
+    </div>
+    <div class="cadd-pp-p">
+      CADD Centre will respond to all the legitimate requests for information, and wherever applicable to correct, amend or delete your personal data. If you wish to make such a request or if you have questions or comments about this Data Privacy Policy, please click on “Contact Us” and feel free to share.
+    </div>
+    <div class="cadd-pp-p">
+      This Data Privacy policy is updated on a regular basis. You will find the date of the last update on this page.
+    </div>
+    <div class="cadd-pp-space"></div>
+    <div class="cadd-pp-space"></div>
+    <div class="cadd-pp-space"></div>
+    <div class="cadd-pp-space"></div>
+  </div>
+    
+</body>
+  
+  {% endblock %} 
+
+  {% block footer %} 
+  {% include 'footer.html' %} 
+  {% endblock %}

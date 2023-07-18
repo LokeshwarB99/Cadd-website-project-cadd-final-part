@@ -1,0 +1,394 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.cadd-placement-main-img {
+    
+     /* background-image: url("https://marketing.caddcentre.com/uploads/jobfair/bengaluru.webp"); */
+     background-size: cover;
+     height:600px;
+     width: 100%;
+     background-size: cover;
+     box-sizing: content-box;
+}
+
+.cadd-placement-content{
+    width: 92%;
+    margin: 0 auto;
+}
+
+h2{
+    color:rgb(237, 28, 36) ;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.cadd-placement-service-box{
+    padding:16px ;
+}
+
+.cadd-placement-service-box p{
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.cadd-placement-apply {
+    text-align: center;
+    font-weight: 700;
+
+}
+.cadd-placement-w-8{
+    width: 28px;
+    height: 32px;
+    margin: 10px;
+}
+
+.cadd-placement-b1{
+    display: flex;
+    background-color: #fff3e8;
+    margin: 10px;
+    padding: 20px;
+    box-shadow:-1px 2px 6px 1px hsla(0,0%,48%,.3);
+    border-radius: 10px;
+    align-items: center;
+}
+
+h4{
+    color: #e4282e;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.cadd-placement-para{
+    font-size: 13px;
+}
+
+.cadd-placement-section-2{
+    padding:16px;
+ 
+}
+
+.cadd-placement-placed{
+    color:rgb(237, 28, 36) ;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px;
+    text-align: center;
+}
+
+.cadd-placement-section-2{
+    background-color: #fff3e8;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.cadd-placement-section-2 p{
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.cadd-placement-caddjob-img{
+    margin-top: 25px;
+    height:205px;
+    width: 430px;
+}
+
+.cadd-placement-boarding{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cadd-placement-processflow-img{
+    margin-top: 30px;
+    height: 350px;
+    width: 350px;
+    
+    padding-left: 50px;
+}
+
+.cadd-placement-job-market{
+    width: 50%;
+}
+
+
+
+.cadd-placement-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media(max-width:828px){
+    .cadd-placement-job-market{
+        width: 100%;
+    }
+}
+
+@media(max-width:502px){
+    .cadd-placement-caddjob-img{
+        width: 300px;
+    }
+
+    .cadd-placement-processflow-img{
+        width: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+}
+
+.cadd-placement-client-speaks{
+    width: 500px;
+    margin-top: 15px;
+}
+
+.cadd-placement-comment{
+    display: block;
+    margin-top: 20px;
+}
+
+.cadd-placement-soc-media{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.f{
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+    border: 1px solid black;
+    border-radius: 30%;
+}
+
+.f:hover{
+    color: white;
+    background-color: #e4282e;
+}
+
+label{
+    display: block;
+}
+
+.cadd-placement-container-form{
+    padding: 32px;
+    position:absolute;
+    right:20px;
+    height:450px;
+    width:auto;
+}
+.cadd-placement-container-form img{
+   height:100%;
+    }
+.cadd-placement-apply-now{
+    color: #e4282e;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form{
+   padding: 32px; 
+   background-color: white;
+   box-shadow: 0 0 3px #00000029!important;
+   
+}
+
+input{
+    margin-left: 10px;
+    padding: 6px 12px;
+    margin-bottom: 16px;
+    width: 80%;
+    border-radius: 3px;
+    border: 1px solid rgb(182, 190, 202);
+}
+
+input::placeholder{
+    color: rgb(182, 190, 202) ;
+}
+
+input:focus{
+    outline-style: none;
+}
+
+button{
+    padding: 6px 12px;
+    margin-left: 30px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    font-weight: 200;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+.cadd-placement-section-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+}
+
+.cadd-placement-client-testimonial{
+    width:60%
+}
+
+@media(max-width:902px){
+    .cadd-placement-client-testimonial{
+        width: 100%;
+    }
+
+
+    .cadd-placement-client-speaks{
+        width: 500px;
+        margin-top: 15px;
+    }
+
+    .cadd-placement-section-3{
+        justify-content: center;
+    }
+    
+}
+
+@media(max-width:902px){
+
+    .cadd-placement-client-speaks{
+        width: 300px;
+        
+    } 
+}
+
+.cadd-placement-job-opportunities{
+    background-color: #fff3e8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cadd-placement-select{
+    width:20%;
+    padding: 6px 12px;
+    font-size: 10px;
+    border: 1px solid  rgb(182, 190, 202);
+    border-radius: 3px;
+}
+
+@media(max-width:890px){
+    .cadd-placement-select{
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+.cadd-placement-all-jobs{
+    
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns:32.5% 32.5% 32.5% ;
+   
+}
+
+.cadd-placement-boxes{
+    box-shadow: 0 0 6px #00000029;
+    background-color: white;
+    font-size: 10px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    
+}
+
+
+.cadd-placement-box-flex{
+    display: grid;
+    justify-content: space-between;
+    margin: 5px 0 10px 5px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.cadd-placement-loc{
+    display: flex;
+    margin: 5px;
+    
+}
+
+.cadd-placement-sal{
+    display: flex;
+    margin: 5px;
+    
+}
+
+.cadd-placement-last{
+    display: flex;
+    margin-left: 70px;
+   
+}
+
+.cadd-placement-sal-last{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+    
+}
+
+.cadd-placement-load-more{
+  
+    text-align: center;
+    margin: 40px 0;
+    
+}
+
+.cadd-placement-jobfair-img{
+     
+     margin: 20px;
+}
+
+.cadd-placement-job-fair-and-counselling{
+    background-color: #fff3e8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cadd-placement-job-fair-and-counselling{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.cadd-placement-job-fair{
+    width: 70%;
+}
+
+@media(max-width:650px){
+
+    .cadd-placement-job-fair{
+        width: 100%;
+    }
+
+    .cadd-placement-jobfair-img{
+     
+        width: 100%;
+        text-align: center;
+   }
+
+}

@@ -1,0 +1,129 @@
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %}
+  <link rel="stylesheet" type="text/css" href="{% static 'caddWebsiteMain\courseGroup\courseGroup.css' %}">
+  <!-- <script src="../cadd.js"></script> -->
+{% endblock %}
+
+  
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+  <header>
+    <h1>Our Courses</h1>
+  </header>
+  <main>
+    
+    {% for obj in objects %}
+    <div class="course">
+      <!-- <img src="course1.jpg" alt="Course 1"> -->
+      <h2>{{obj.courseGroupName}}</h2>
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p> -->
+      <ul>
+        {% if obj.core_set %}
+        {% for li_object in obj.core_set.all %}
+        <li><a href="/course/{{obj.courseGroupSlug}}/{{li_object.coreSlug}}">{{li_object}}</a></li>
+        
+        {% endfor %}
+        {% endif %}
+        {% if obj.module_set.all %}
+        {% for li_object in obj.module_set.all %}
+        <li><a href="/course/{{obj.courseGroupSlug}}/{{li_object.moduleSlug}}">{{li_object}}</a></li>
+        
+        {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+    {% endfor %}
+    <!-- <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Product Design Analysis</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">AutoCAD For Mechanical Engineers </a></li>
+        <li><a href="#">Solid Works</a></li>
+        <li><a href="#">Revit MEP</a></li>
+        <li><a href="#">ANSYS</a></li>
+        <li><a href="#">CREO</a></li>
+        <li><a href="#">NX CAD</a></li>
+        
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+    <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Our Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">Proficient Certificate</a></li>
+        <li><a href="#">Master Certificate</a></li>
+        <li><a href="#">Expert Certificate</a></li>
+        <li><a href="#">sub courses</a></li>
+        <li><a href="#">sub courses</a></li>
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+    <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Our Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">Proficient Certificate</a></li>
+        <li><a href="#">Master Certificate</a></li>
+        <li><a href="#">Expert Certificate</a></li>
+        <li><a href="#">sub courses</a></li>
+        <li><a href="#">sub courses</a></li>
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+    <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Our Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">Proficient Certificate</a></li>
+        <li><a href="#">Master Certificate</a></li>
+        <li><a href="#">Expert Certificate</a></li>
+        <li><a href="#">sub courses</a></li>
+        <li><a href="#">sub courses</a></li>
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+    <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Our Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">Proficient Certificate</a></li>
+        <li><a href="#">Master Certificate</a></li>
+        <li><a href="#">Expert Certificate</a></li>
+        <li><a href="#">sub courses</a></li>
+        <li><a href="#">sub courses</a></li>
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+    <div class="course">
+      <img src="course1.jpg" alt="Course 1">
+      <h2>Our Courses</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae felis eu mi hendrerit placerat.</p>
+      <ul>
+        <li><a href="#">Proficient Certificate</a></li>
+        <li><a href="#">Master Certificate</a></li>
+        <li><a href="#">Expert Certificate</a></li>
+        
+      </ul>
+      <a  class="a" href="#">Learn More</a>
+    </div>
+   -->
+  </main>
+{% endblock %}
+
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

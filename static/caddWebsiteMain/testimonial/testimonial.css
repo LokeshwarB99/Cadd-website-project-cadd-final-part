@@ -1,0 +1,189 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    --padding-left-right: 15px;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.image{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 100%;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .avatar {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    background-color: var(--red);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.testimonial .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial .info {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.testimonial .name {
+font-weight: bold;
+font-size: 18px;
+margin-bottom: 5px;
+}
+
+.testimonial .date {
+font-size: 14px;
+color: #777;
+}
+
+.testimonial .content {
+margin-top: 10px;
+}
+
+.testimonial .rating {
+color: var(--red);
+}
+
+.quote {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+.quote:before {
+    font-family: Arial, sans-serif;
+    content: "\201C";
+    color: var(--red);
+    font-size: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.quote:after {
+    font-family: Arial, sans-serif;
+    content: "\201C";
+    color: var(--red);
+    font-size: 80px;
+    position: absolute;
+    bottom: -40px;
+    right: 10px;
+}
+
+.quote .content {
+    padding-top: 10px;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quote .author {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quote .company {
+    color: #777;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans-serif);
+  }
+ 
+
+
+.heading-txt{
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    gap: 10px;
+    padding: 15px 0px;
+    color: var(--red);
+    font-size: 50px;
+    font-weight: 700;  
+    text-align: center; 
+}
+
+.subheading-txt{
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    gap: 10px;
+    padding: 15px 0px;
+    color: var(--red);
+    font-size: 35px;
+    font-weight: 700;  
+}
+
+.red-bg .heading-txt{
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				  1px -1px 0 #000;
+	font-size: 50px;
+    color: white;
+}

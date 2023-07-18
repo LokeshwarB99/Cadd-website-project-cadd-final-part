@@ -1,0 +1,114 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h2{
+    color:rgb(237, 28, 36)
+    ;
+}
+
+ol{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cadd-certicate-courses-home:hover{
+    cursor: pointer;
+    color:rgb(237, 28, 36);
+}
+
+ol li{
+    margin: 5px 5px;
+}
+
+.cadd-certicate-courses-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cadd-certicate-courses-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cadd-certicate-courses-heading{
+    font-size:30px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cadd-certicate-courses-para{
+    margin: 20px 0;
+}
+
+.cadd-certicate-courses-section-1{
+    width: 60%;
+    padding-right:30px;
+}
+.cadd-certicate-courses-section-2{
+    width: 40%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.cadd-certicate-courses-bg-color{
+    background-color: rgb(249, 246, 238);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.cadd-certicate-courses-flex{
+    display: flex;
+    margin: 16px 0px;
+    align-items: center;
+}
+
+.cadd-certicate-courses-row{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    padding: 30px ;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+.cadd-certicate-courses-row:not(:last-child){
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.cadd-certicate-courses-row1{
+    font-size: 25px;
+}
+
+.cadd-certicate-courses-row img{
+    transition: transform 1s;
+}
+
+.cadd-certicate-courses-row img:hover{
+    transform:scale(1.5) ;
+    
+}
+
+@media(max-width:800px){
+    .cadd-certicate-courses-section-1{
+        width: 100%;
+    }
+    .cadd-certicate-courses-section-2{
+        width: 80%;
+    }
+}
+
+@media(max-width:450px){
+    .cadd-certicate-courses-row1{
+        font-size: 16px;
+    }
+}
+

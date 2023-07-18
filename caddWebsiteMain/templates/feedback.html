@@ -1,0 +1,204 @@
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %} 
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/feedback/feedback.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %} 
+    <div class="cadd-feedback-comment">
+        <p>Thank you for choosing CADD Centre. We strive to ensure that you have a pleasant experience while perusing a course. It is our duty to provide you the best of services. Your feedback is what motivates us to do better. Help us serve you better by answering this short survey.</p>
+    </div> 
+
+    {% if result %} 
+    {{result}} 
+    {% endif %}
+    <form method='post' action="">{% csrf_token %}
+    <div class="cadd-feedback-main">
+        <div class="container">
+            <div class="cadd-feedback-content">
+                <div class="cadd-feedback-exp">
+                    <h3>Please rate your experience</h3>
+                </div>
+                <div class="feed-1" id="feed-1">
+                    <p class="cadd-feedback-query"><b>1. </b>The quality of instruction was good and training met my expectations</p>
+                    <div class="cadd-feedback-flex">
+                        <input type="radio" name="quality-of-instruction" id="quality-of-instruction-1" value="1">
+                        <div class="box">
+                            <label for="quality-of-instruction-1">
+                                <img src="/media/caddWebsiteMain/feedback/poor.png" alt="poor">
+                                <p class="emote">Poor</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-instruction" id="quality-of-instruction-2" value="2">
+                        <div class="box">
+                            <label for="quality-of-instruction-2">
+                                <img src="/media/caddWebsiteMain/feedback/fair.png" alt="poor">
+                                <p class="emote">Fair</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-instruction" id="quality-of-instruction-3" value="3">
+                        <div class="box">
+                            <label for="quality-of-instruction-3">
+                            <img src="/media/caddWebsiteMain/feedback/average.png" alt="poor">
+                            <p class="emote">Average</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-instruction" id="quality-of-instruction-4" value="4">
+                        <div class="box">
+                            <label for="quality-of-instruction-4">
+                                <img src="/media/caddWebsiteMain/feedback/happy.png" alt="poor">
+                                <p class="emote">Happy</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-instruction" id="quality-of-instruction-5" value="5">
+                        <div class="box">
+                            <label for="quality-of-instruction-5">
+                                <img src="/media/caddWebsiteMain/feedback/excellent.png" alt="poor">
+                                <p class="emote">Excellent</p>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="feed-2">
+                    <p class="cadd-feedback-query"><b>2. </b>Trainer was knowledgeable and met the training objectives</p>
+                                        <div class="cadd-feedback-flex">
+                        <input type="radio" name="quality-of-trainer" id="quality-of-trainer-1" value="1">
+                        <div class="box">
+                            <label for="quality-of-trainer-1">
+                                <img src="/media/caddWebsiteMain/feedback/poor.png" alt="poor">
+                                <p class="emote">Poor</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainer" id="quality-of-trainer-2" value="2">
+                        <div class="box">
+                            <label for="quality-of-trainer-2">
+                                <img src="/media/caddWebsiteMain/feedback/fair.png" alt="poor">
+                                <p class="emote">Fair</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainer" id="quality-of-trainer-3" value="3">
+                        <div class="box">
+                            <label for="quality-of-trainer-3">
+                            <img src="/media/caddWebsiteMain/feedback/average.png" alt="poor">
+                            <p class="emote">Average</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainer" id="quality-of-trainer-4" value="4">
+                        <div class="box">
+                            <label for="quality-of-trainer-4">
+                                <img src="/media/caddWebsiteMain/feedback/happy.png" alt="poor">
+                                <p class="emote">Happy</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainer" id="quality-of-trainer-5" value="5">
+                        <div class="box">
+                            <label for="quality-of-trainer-5">
+                                <img src="/media/caddWebsiteMain/feedback/excellent.png" alt="poor">
+                                <p class="emote">Excellent</p>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="feed-3">
+                    <p class="cadd-feedback-query"><b>3. </b>The courseware & training materials were good</p>
+                                        <div class="cadd-feedback-flex">
+                        <input type="radio" name="quality-of-trainingMaterials" id="quality-of-trainingMaterials-1" value="1">
+                        <div class="box">
+                            <label for="quality-of-trainingMaterials-1">
+                                <img src="/media/caddWebsiteMain/feedback/poor.png" alt="poor">
+                                <p class="emote">Poor</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainingMaterials" id="quality-of-trainingMaterials-2" value="2">
+                        <div class="box">
+                            <label for="quality-of-trainingMaterials-2">
+                                <img src="/media/caddWebsiteMain/feedback/fair.png" alt="poor">
+                                <p class="emote">Fair</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainingMaterials" id="quality-of-trainingMaterials-3" value="3">
+                        <div class="box">
+                            <label for="quality-of-trainingMaterials-3">
+                            <img src="/media/caddWebsiteMain/feedback/average.png" alt="poor">
+                            <p class="emote">Average</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainingMaterials" id="quality-of-trainingMaterials-4" value="4">
+                        <div class="box">
+                            <label for="quality-of-trainingMaterials-4">
+                                <img src="/media/caddWebsiteMain/feedback/happy.png" alt="poor">
+                                <p class="emote">Happy</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="quality-of-trainingMaterials" id="quality-of-trainingMaterials-5" value="5">
+                        <div class="box">
+                            <label for="quality-of-trainingMaterials-5">
+                                <img src="/media/caddWebsiteMain/feedback/excellent.png" alt="poor">
+                                <p class="emote">Excellent</p>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="feed-4">
+                    <p class="cadd-feedback-query"><b>4. </b>Your overall experience</p>
+                                        <div class="cadd-feedback-flex">
+                        <input type="radio" name="overal-experience" id="overal-experience-1" value="1">
+                        <div class="box">
+                            <label for="overal-experience-1">
+                                <img src="/media/caddWebsiteMain/feedback/poor.png" alt="poor">
+                                <p class="emote">Poor</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="overal-experience" id="overal-experience-2" value="2">
+                        <div class="box">
+                            <label for="overal-experience-2">
+                                <img src="/media/caddWebsiteMain/feedback/fair.png" alt="poor">
+                                <p class="emote">Fair</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="overal-experience" id="overal-experience-3" value="3">
+                        <div class="box">
+                            <label for="overal-experience-3">
+                            <img src="/media/caddWebsiteMain/feedback/average.png" alt="poor">
+                            <p class="emote">Average</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="overal-experience" id="overal-experience-4" value="4">
+                        <div class="box">
+                            <label for="overal-experience-4">
+                                <img src="/media/caddWebsiteMain/feedback/happy.png" alt="poor">
+                                <p class="emote">Happy</p>
+                            </label>
+                        </div>
+                        <input type="radio" name="overal-experience" id="overal-experience-5" value="5">
+                        <div class="box">
+                            <label for="overal-experience-5">
+                                <img src="/media/caddWebsiteMain/feedback/excellent.png" alt="poor">
+                                <p class="emote">Excellent</p>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+            <button>SUBMIT FEEDBACK</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %} 
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

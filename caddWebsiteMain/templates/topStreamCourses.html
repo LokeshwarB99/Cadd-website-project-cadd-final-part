@@ -1,0 +1,97 @@
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/courses/topStreamCourses/topStreamCourses.css' %}">
+{% endblock %} 
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="course-container-img">
+        <img  src="{{course.coreImage.url}}"   style="width: 100%;" alt="">
+    </div>
+        <div class="content">
+            {% with course.coredescription_set.all as objects %}
+            <h2>{{objects.0.descriptionTitle}}</h2>
+            <p>{{objects.0.description | safe}}</p>
+            <h2 class="center">{{objects.1.descriptionTitle}}</h2>
+            <p class="center">{{objects.1.description | safe}}</p>
+            <div class="key-process">
+                {% for obj in objects.1.topstreamdescription_set.all %}
+                <img class="trans" width="30%" src="{{obj.logoImage.url}}" alt="">
+                {% endfor %}
+            </div>
+            <h2 class="center" >{{objects.2.descriptionTitle}}</h2>
+            <p  class="center" >{{objects.2.description | safe}}</p>
+            <div class="grid-box">
+                {% for obj in objects.2.topstreamdescription_set.all %}
+                <div class="box">
+                    <div class="left">
+                        <img src="{{obj.logoImage.url}}" alt="">
+                        <h2>{{obj.descriptionTitle}}</h2>
+                    </div>
+                    <div class="rigth">
+                        <!-- <p>{{objects.topstreaminnercontentdescription_set.all.0.description}}</p>
+                        <ul class="grid">
+                        {% for obj in objects.topstreaminnercontentdescription_set.all %} 
+                            {% if forloop.counter0 >= 1 %}
+                              
+                                    <li>{{obj.description}}</li>
+                               
+                            {% endif %} 
+                        {% endfor %} -->
+                        {{obj.description | safe}}
+                    </div>
+                </div>
+                {% endfor %}
+            {% endwith %}
+                <!-- <div class="box">
+                    <div class="left">
+                        <img src="https://caddcentre.com/assets/images/stream/caddSoftware.png" alt="">
+                        <h2>Programming</h2>
+                    </div>
+                    <div class="rigth">
+                        <p>Knowledge in programming in specific computer languages help mechanical engineers create and automate applications especially for analysing and validating their product ideas. Using programming languages, they can create Artificial Intelligence applications</p>
+                        <ul class="grid">
+                            <li>Python for Engineers</li>
+                            <li>Java</li>
+                            <li>C programming</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="https://caddcentre.com/assets/images/stream/caddSoftware.png" alt="">
+                        <h2>GD&T</h2>
+                    </div>
+                    <div class="rigth">
+                        <p>Short for Geometric Dimensioning and Tolerancing, GD&T is a system for defining and communicating design intent and engineering tolerances. This information helps in controlling variations in manufacturing processes.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <img src="https://caddcentre.com/assets/images/stream/caddSoftware.png" alt="">
+                        <h2>Project Planning and Management</h2>
+                    </div>
+                    <div class="rigth">
+                        <p>Project management in mechanical engineering is concerned with planning, controlling, and completing product development life cycle while meeting the time, cost, and quality goals.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

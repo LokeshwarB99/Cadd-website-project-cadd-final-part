@@ -1,0 +1,93 @@
+{% extends 'caddWebsite/base.html' %} 
+
+
+{% load static %}
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/courses/certificateCourses/certificateCourses.css' %}">
+{% endblock %} 
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+{% with course.coredescription_set.all as object %}
+<div class="cadd-certicate-courses-course-container-img">
+    <img src="{{course.coreImage.url}}" width="100%" alt="">
+</div>
+    <div class="cadd-certicate-courses-container">
+        <nav>
+            <ol>
+                <li class="cadd-certicate-courses-home"><a href="/">Home</a></li>
+                <li>/</li>
+                <li style="color:rgb(237, 28, 36);"><a href="/courseGroup">Course</a></li>
+                <li>/</li>
+                <li><a href="#">{{course.coreName}}</a></li>
+            </ol>
+        </nav>
+        <div class="cadd-certicate-courses-content">
+            <div class="cadd-certicate-courses-section-1">
+                <div class="cadd-certicate-courses-heading">
+                    <img style="margin-right: 8px;" height="40px" width="40px" src="https://caddcentre.com/assets/images/courses/content/introduction.svg" alt="">
+                    <h2 style="font-weight: 400;font-size: 28px;">Overview & Objectives</h2>
+                </div>
+                <div class="cadd-certicate-courses-para">
+
+                    <p style="margin-bottom: 20px;">{{object.0.description | safe}}</p> 
+                            
+                    <!-- <p>Proficient Courses are designed to impart students with a deep knowledge and competency in the right CAD software. The courses cover all the relevant features of a given software and offer training in the most widely used version of the software.</p> -->
+                </div>
+            </div>
+           
+            <div class="cadd-certicate-courses-section-2"> 
+
+                <div class="cadd-certicate-courses-flex">
+                    <img height="20px" style="margin: 0 5px 0 5px;" src="	https://caddcentre.com/assets/images/course-level/duration.svg" alt="">
+                    
+                        
+                        <p><b>Duration: </b>{{object.1.description|safe}}</p>
+                        
+                </div>
+
+                <div class="cadd-certicate-courses-flex">
+                    <img height="20px" style="margin: 0 5px 0 5px;" src="https://caddcentre.com/assets/images/course-level/ideal.svg" alt="">
+                    <p><b>Ideal for: </b></p>
+                </div>
+                <ul>
+                    {{object.2.description | safe}}
+                    <!-- <li style="margin:1rem 0 1rem 2rem;">Professionals with adequate work experience
+                        and practical exposure to CAD concepts
+                        and software environment</li> -->
+                </ul>
+            </div>
+
+        </div>
+
+{% endwith %}
+        <div class="cadd-certicate-courses-content-1">
+            <h2 style="text-align: center; margin: 30px 0;font-size: 30px;font-weight: 500;">Key Features</h2>
+            <div class="cadd-certicate-courses-bg-color">
+                <div class="cadd-certicate-courses-key-feature">
+                    <div class="cadd-certicate-courses-row">
+                        <img class="cadd-certicate-courses-hover" src="https://caddcentre.com/assets/images/course-level/job.svg" alt="">
+                        <p class="cadd-certicate-courses-row1">Job/internship opportunity</p>
+                    </div>
+                    <div class="cadd-certicate-courses-row">
+                        <p class="cadd-certicate-courses-row1">Projects for each module</p>
+                        <img class="cadd-certicate-courses-hover" src="https://caddcentre.com/assets/images/course-level/projects.svg" alt="">
+                    </div>
+                    <div class="cadd-certicate-courses-row">
+                        <img class="cadd-certicate-courses-hover" src="https://caddcentre.com/assets/images/course-level/nsdc.svg" alt="">
+                        <p class="cadd-certicate-courses-row1">NSDC certification</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

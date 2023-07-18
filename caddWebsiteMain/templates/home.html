@@ -1,0 +1,212 @@
+
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %} 
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+/>
+<link rel="stylesheet" href="{% static 'caddWebsiteMain/home/home.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Rampdvart+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+{% for message in messages %} 
+{{message}}
+{% endfor %}
+<section id="cadd-description">
+    <div class="banner"><img src="/media/caddWebsiteMain/home/CADD-Banner.png" alt="" /></div>
+    <div class="whycadd-description">
+      <h1>Welcome to CADD Center</h1>
+      <p>
+        As Asia's biggest network of CAD Training Centre in Chennai. We offer
+        CAD Training with job placement that help students add value to their
+        career with globally recognized training and certifications. We enlist
+        most sought-after courses for everyone – designer, drafter,
+        administrator , or a programmer. Hence its very essential to do CAD
+        software courses in the best CADD Training Centre in Chennai.
+      </p>
+      <h1>Why CADD Center?</h1>
+      <p>
+        With rapid advancements in Cad technologies, major industries engaged
+        in engineering services are preferring CAD software in to their
+        everyday work. Our CADD Centre provides software solutions across a
+        variety of Engineering branches from Civil, Construction, Mechanical,
+        Geotechnical, Architecture to Designing and Animations.
+        <br /><br />
+        Some of our top CAD software training courses that are grabbing
+        attractions of the major engineering industries are- AutoCAD, ANSYS
+        SpaceClaim, SolidWorks, Revit MEP, etc. Thus, CAD software's are
+        ruling the industries all over the world and have brought dramatic
+        changes in many firms by automating the process of the development
+        life cycle for a product.
+        <a href="/about"> Learn More →</a>
+      </p>
+    </div>
+    <div class="world-class-division">
+      <h1>World class training, World over</h1>
+      <div class="cadd-achievement-content-box">
+        <div class="content-box-1">
+          <h2>2M+</h2>
+          <p>Engineers and Professionals trained</p>
+        </div>
+        <div class="content-box-2 content-box">
+          <h2>730</h2>
+          <p>Training centres - Asia's biggest network</p>
+        </div>
+        <div class="content-box-3 content-box">
+          <h2>24</h2>
+          <p>Global locations</p>
+        </div>
+        <div class="content-box-4 content-box">
+          <h2>100+</h2>
+          <p>Industry-ready courses</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1 class="testimonial-title">Hear from our students</h1>
+    <section class="testimonial">
+      <div class="content">
+        <div class="container">
+          <div class="box box1">
+            <h1 class="testimonial-title-1">
+              Straight from our learners' hearts!
+            </h1>
+            <p>
+              It is always joyful to enable passionate learners in their
+              journey to success. Watch our learners share their experiences
+              with learning at CADD Centre
+            </p>
+          </div>
+          <div class="box box2">
+            <a
+              href="https://www.youtube.com/playlist?list=PL9ovgj0ugeztxJiva8ZbSnYXzF0r1auvT"
+              target="_blank"
+              ><img
+                class="yts"
+                src="https://caddcentre.com/assets/images/youtubeTestimonial.png
+                      "
+                alt="yts"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="cadd-card-slider">
+    <div class="cadd-first-card-slider">
+      <h1>Top Stream Certification Courses</h1>
+      <div class="owl-carousel" 
+      style="display: flex;
+      justify-content: space-between;
+      padding:30px;">
+      {% for obj in topStreamCourse.core_set.all %}
+        <div class="card">
+          <img
+            src="{{obj.coreImage.url}}"
+            alt="cadd-first-job-pakka"
+          />
+          <h2>{{obj.coreName}}</h2>
+          <div class="cadd-card-short-details">
+            <span><img src="/media/caddWebsiteMain/home/cadd-duration.svg" />40hrs</span>
+            <span><img src="/media/caddWebsiteMain/home/cadd-mode.svg" />In-Centre</span>
+          </div>
+          <p>
+            Project Based assessment <span>|</span>World Class Courseware
+            <span>|</span>Industry recognized support <span>|</span>Placement
+            support
+          </p>
+          <button><a href="/course/{{topStreamCourse.courseGroupSlug}}/{{obj.coreSlug}}">Know More</a></button>
+        </div>
+        {% endfor %}
+        {% for obj in projectManagementCourse.module_set.all %}
+        <div class="card">
+          <img
+            src="{{obj.moduleImage.url}}"
+            alt="cadd-first-job-pakka"
+          />
+          <h2>{{obj.moduleName}}</h2>
+          <div class="cadd-card-short-details">
+            <span><img src="/media/caddWebsiteMain/home/cadd-duration.svg" />50hrs</span>
+            <span><img src="/media/caddWebsiteMain/home/cadd-mode.svg" />In-Centre</span>
+          </div>
+          <p>
+            Project Based assessment <span>|</span>World Class Courseware
+            <span>|</span>Industry recognized support <span>|</span>Placement
+            support
+          </p>
+          <button><a href="/course/{{projectManagementCourse.courseGroupSlug}}/{{obj.moduleSlug}}">Know More</a></button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+      <div class="cadd-first-card-slider">
+        <h1>Trending Technology Courses</h1>
+       <div class="owl-carousel" 
+      style="display: flex;
+      justify-content: space-around;
+      padding:30px;">
+              {% for obj in productDesignCourse.module_set.all %}
+              <div class="card">
+                <img
+                  src="{{obj.moduleImage.url}}"
+                  alt="cadd-first-job-pakka"
+                />
+                <h2>{{obj.moduleName}}</h2>
+                <div class="cadd-card-short-details">
+                  <span><img src="/media/caddWebsiteMain/home/cadd-duration.svg" />50hrs</span>
+                  <span><img src="/media/caddWebsiteMain/home/cadd-mode.svg" />In-Centre</span>
+                </div>
+                <p>
+                  Project Based assessment <span>|</span>World Class Courseware
+                  <span>|</span>Industry recognized support <span>|</span>Placement
+                  support
+                </p>
+                <button><a href="/course/{{productDesignCourse.courseGroupSlug}}/{{obj.moduleSlug}}">Know More</a></button>
+              </div>
+              {% endfor %}
+              {% for obj in informationTechnologyCourse.module_set.all %}
+              <div class="card">
+                <img
+                  src="{{obj.moduleImage.url}}"
+                  alt="cadd-first-job-pakka"
+                />
+                <h2>{{obj.moduleName}}</h2>
+                <div class="cadd-card-short-details">
+                  <span><img src="/media/caddWebsiteMain/home/cadd-duration.svg" />50hrs</span>
+                  <span><img src="/media/caddWebsiteMain/home/cadd-mode.svg" />In-Centre</span>
+                </div>
+                <p>
+                  Project Based assessment <span>|</span>World Class Courseware
+                  <span>|</span>Industry recognized support <span>|</span>Placement
+                  support
+                </p>
+                <button><a href="/course/{{informationTechnologyCourse.courseGroupSlug}}/{{obj.moduleSlug}}">Know More</a></button>
+              </div>
+              {% endfor %}
+       </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %} 
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

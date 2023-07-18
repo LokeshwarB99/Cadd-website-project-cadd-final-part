@@ -1,0 +1,156 @@
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/courses/generalCourses/generalCourses.css' %}">
+{% endblock %} 
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="CADD-courses-container">    
+       <div class="CADD-courses-course-container-img" >
+
+       <img src="{{course.moduleImage.url}}" alt="" ></div>
+        <div class="CADD-courses-content">
+          
+            <h3 style="font-size: 26px; font-weight: 400;">{{course.moduleName}} Training & Certification Course</h3>
+            <div class="CADD-courses-flex">
+                <div class="CADD-courses-section-1">
+                {% for objects in course.moduledescription_set.all %}
+                    <div class="CADD-courses-heading">
+                        <img src="/media/caddWebsiteMain/courseSubImages/{{forloop.counter}}.svg" alt="">
+                        <h2>{{objects.descriptionTitle}}</h2>
+                        
+                    </div>
+                    {% if objects.descriptionTitle|lower == 'related courses' %}
+                    <div class="CADD-courses-related_courses">{{objects.description|safe}}</div>
+                    {% else %} 
+                    <p>{{objects.description|safe}}</p>
+                    {% endif %}
+                    <!-- {% if objects.courseContentTitle|lower == 'ideal for' %} 
+                    <ul>
+                        {% for obj in objects.coursecontentdescription_set.all %} 
+                        <li>{{obj.courseContentDescription}}</li>
+                        {% endfor %}
+                    </ul>
+                    
+                    {% elif objects.courseContentTitle|lower == 'related courses' %}
+                    <p>{{objects.coursecontentdescription_set.all.0.courseContentDescription}}</p> 
+                    <div class="button">
+                        {% for obj in objects.coursecontentdescription_set.all %} 
+                            
+                            {% if forloop.counter0 >= 1 %} 
+                                <a href="#"><button>{{obj.courseContentDescription}}</button></a>
+                            {% endif %}
+                           
+                        {% endfor %}
+                    </div>
+                   
+                    {% else %}
+                    <p>{{objects.coursecontentdescription_set.all.0.courseContentDescription}}</p> 
+                        {% for obj in objects.coursecontentdescription_set.all %} 
+                            <ul>
+                            {% if forloop.counter0 >= 1 %} 
+                                <li>{{obj.courseContentDescription}}</li>
+                            {% endif %}
+                            </ul>
+                        {% endfor %} 
+                    {% endif %} -->
+                {% endfor %}
+                    <!-- <div class="heading">
+                        <img src="https://caddcentre.com/assets/images/courses/content/scope.svg" alt="">
+                        <h2>Scope of Course</h2>
+                    </div>
+                    
+                    <p>The course teaches you how to use SolidWorks for planning, visual ideation, modeling, feasibility assessment, and prototyping. You will learn how to design and build mechanical, electrical, and software elements in your design. Training will be given in the following skills:</p>
+                    <ul>
+                        <li>Sketch creation tools</li>
+                        <li>Sketch editing tools</li>
+                        <li>Part modeling features</li>
+                        <li>Part editing features</li>
+                        <li>Assembly modeling</li>
+                        <li>Surface modeling</li>
+                        <li>Sheet metal design</li>
+                        <li>Weldment design</li>
+                        <li>Drawing views & annotations</li>
+                        <li>Model visualization</li>
+                    </ul>
+                    <div class="heading">
+                        <img src="https://caddcentre.com/assets/images/courses/content/career_prospects.svg" alt="">
+                        <h2>Career Prospects / Job Roles</h2>
+                    </div>
+                    <p>Solidworks has a large community of users, and employers frequently seek candidates with SolidWorks experience. Students well versed in SolidWorks are placed as:</p>
+                    <div class="heading">
+                        <img src="https://caddcentre.com/assets/images/courses/content/related_courses.svg" alt="">
+                        <h2>Related Courses</h2>
+                    </div>
+                    <p>Explore the courses that teach the software in different combinations under the following course categories:</p>
+                    <div class="button">
+                        <a href="#"><button>Proficient</button></a>
+                        <a href="#"><button>Masters</button></a>   
+                        <a href="#"><button>Expert</button></a>    
+                    </div>
+                    <div class="heading">
+                        <img src="	https://caddcentre.com/assets/images/courses/content/ideal_for.svg" alt="">
+                        <h2>Ideal For</h2>
+                    </div>
+                    <ul>
+                        <li>Students pursuing or completing Mechanical, Automobile & Aeronautical engineering</li>
+                        <li>Students of diploma / ITI / certificate courses in these disciplines</li>
+                        <li>Anybody interested to get an entry into the world of SolidWorks</li>
+                    </ul> -->
+                </div>
+                <div class="CADD-courses-section-2">
+                    <div>
+                        <img src="{{advertisements.0.banner.url}}" alt="">
+                    </div>
+                    <div>
+                        <img src="{{advertisements.1.banner.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="CADD-courses-last">
+            <h2 style="font-size: 30px;margin-bottom: 20px;">Key Differentiators</h2>
+            <div class="CADD-courses-section-3">
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="	https://caddcentre.com/assets/images/courses/diff/govt.svg" alt="">
+                    <p>Government accredited courses</p>
+                </div>
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="	https://caddcentre.com/assets/images/courses/diff/practical.svg" alt="">
+                    <p>Practical approach to subjects</p>
+                </div>
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="	https://caddcentre.com/assets/images/courses/diff/exposure.svg" alt="">
+                    <p>Exposure to real-world projects</p>
+                </div>
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="https://caddcentre.com/assets/images/courses/diff/trainer.svg" alt="">
+                    <p>Trainers with hands on experience</p>
+                </div>
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="	https://caddcentre.com/assets/images/courses/diff/worldwide_cert.svg" alt="">
+                    <p>Worldwide certification approval</p>
+                </div>
+                <div class="CADD-courses-heading CADD-courses-box">
+                    <img src="https://caddcentre.com/assets/images/courses/diff/expert.svg" alt="">
+                    <p>Industry experts approved curriculum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %} 
+
+{% block linkjs %} 
+<script src="{% static 'caddWebsiteMain/courses/generalCourses/generalCourses.js' %}"></script>
+{% endblock %}

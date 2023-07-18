@@ -1,0 +1,132 @@
+
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/contact/contact.css' %}">
+{% endblock %}
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+       <img src="https://caddcentre.com/assets/images/contactus/contactus.jpg" alt="kkk">
+    </div>
+    <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-1 address" >
+                        <div class="h2">Address Details</div>
+                        <p><b>CADD Centre</b></p>
+                        <p><b>Mail id: </b><a href = "mailto: abc@example.com"> abc@example.com</a></p>
+                        <p><b>Phone: </b><a href="tel: +91 98840 92869, +91 98840 92853, +91 72003 21341 +91 98840 92869, +91 98840 92853, +91 72003 21341"> +91 98840 92869, +91 98840 92853, +91 72003 21341</a></p>
+                        <img src="https://www.cadd.net.in/cadd/uploads/2021/08/istockphoto-1168945108-612x612.jpg" alt="contact">
+                    </div>
+                    <div class="col-1 feedback">
+                        <div class="h2">Enquiry Form</div>
+                        <form name='contactForm' method="POST" action="." onsubmit="return validateContactForm()">{% csrf_token %}
+                            <fieldset>
+                                <div class="f-title">Fieldset<span>
+                                    {% if result %} 
+                                        {{result}}
+                                    {% endif %}
+                                </span></div>
+                                <label class="mark1" for="name">Name <input type="text" id="name" name='name' required></label>
+                                <label class="mark1" for="email">Email <input type="email" id="email" name="email" required></label>
+                                <label class="mark1" for="phone">Phone <input type="tel" id="phone" name='phone' pattern="[0-9]{10}" required></label>
+                                <label for="subject">Subject 
+                                    <textarea id="subject" name="subject" cols="30" rows="6"></textarea>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <div class="f-title">Verification</div>
+                                <label class="mark2" for="verification">Please enter given two digits <input min="10" max="99" type="number" id="verification" name='verification' required></label>
+                                <p class="smalltext">Number: <span id="verification-id">{{choice}}</span></p>
+                                <button type="submit">SUBMIT</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+{% endblock %} 
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}
+
+{% block linkjs %} 
+<script src="{% static 'caddWebsiteMain/contact/contact.js' %}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/contact/contact.css' %}">
+</head>
+<body>
+    <a href="/">home</a>
+    <div class="main">
+       <img src="https://caddcentre.com/assets/images/contactus/contactus.jpg" alt="kkk">
+    </div>
+    <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-1 address" >
+                        <div class="h2">Address Details</div>
+                        <p><b>CADD Centre</b></p>
+                        <p><b>Mail id: </b><a href = "mailto: abc@example.com"> abc@example.com</a></p>
+                        <p><b>Phone: </b><a href="tel: +91 98840 92869, +91 98840 92853, +91 72003 21341 +91 98840 92869, +91 98840 92853, +91 72003 21341"> +91 98840 92869, +91 98840 92853, +91 72003 21341</a></p>
+                        <img src="https://www.cadd.net.in/cadd/uploads/2021/08/istockphoto-1168945108-612x612.jpg" alt="contact">
+                    </div>
+                    <div class="col-1 feedback">
+                        <div class="h2">Enquiry Form</div>
+                        <form name='contactForm' method="POST" action="." onsubmit="return validateContactForm()">{% csrf_token %}
+                            <fieldset>
+                                <div class="f-title">Fieldset<span>
+                                    {% if result %} 
+                                        {{result}}
+                                    {% endif %}
+                                </span></div>
+                                <label class="mark1" for="name">Name <input type="text" id="name" name='name' required></label>
+                                <label class="mark1" for="email">Email <input type="email" id="email" name="email" required></label>
+                                <label class="mark1" for="phone">Phone <input type="tel" id="phone" name='phone' pattern="[0-9]{10}" required></label>
+                                <label for="subject">Subject 
+                                    <textarea id="subject" name="subject" cols="30" rows="6"></textarea>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <div class="f-title">Verification</div>
+                                <label class="mark2" for="verification">Please enter given two digits <input min="10" max="99" type="number" id="verification" name='verification' required></label>
+                                <p class="smalltext">Number: <span id="verification-id">{{choice}}</span></p>
+                                <button type="submit">SUBMIT</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="{% static 'caddWebsiteMain/contact/contact.js' %}"></script>
+</body>
+</html>
+-->

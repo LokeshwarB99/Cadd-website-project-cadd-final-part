@@ -1,0 +1,189 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+.CADD-courses-course-container-img img{
+width:100%;
+padding:30px;
+}
+.CADD-courses-content{
+    padding: 30px;
+    margin: 20px auto;
+    width: 94%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 5px;
+}
+
+.CADD-courses-flex{
+    display: flex;
+}
+
+
+
+.CADD-courses-section-1{
+    padding: 20px;
+    width: 60%;
+}
+
+.CADD-courses-section-2{
+    width: 40%;
+}
+
+.CADD-courses-heading{
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    color:rgb(237, 28, 36);
+    margin: 0 6px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.CADD-courses-heading img {
+    width:50px;
+    margin: 5px 5px 5px 0;
+}
+.CADD-courses-section-2 img {
+width:100%;
+}
+
+.CADD-courses-container p{
+    margin: 20px 0;
+}
+
+li{
+    margin: 0 0 10px 20px;
+}
+
+ul{
+    margin: 20px 0;
+}
+
+.CADD-courses-button{
+    margin: 20px 0;
+}
+
+button{
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(237, 28, 36);
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.CADD-courses-enquire{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(237, 28, 36);
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    border-radius: 0%5px;
+}
+
+input,select{
+    display: block;
+    width: 95%;
+    margin: 25px 10px;
+    padding: 10px 10px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 3px;
+    outline: none;
+}
+
+.CADD-courses-submit{
+    display: block;
+    margin: 20px auto;
+    padding: 6px 20px;
+    font-weight: 500;
+ 
+}
+
+input::placeholder{
+    font-size: 16px;
+}
+
+.CADD-courses-cadd{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.CADD-courses-last{
+    padding: 30px;
+    margin: 20px auto;
+    width: 94%;
+}
+
+.CADD-courses-box{
+    margin: 10px 0;
+}
+
+.CADD-courses-section-3 p{
+    margin: 0 10px;
+}
+
+.CADD-courses-section-3{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+
+/* this is for the li of related courses to look like button */
+
+.CADD-courses-related_courses{
+    margin: 20px 0;
+}
+
+.CADD-courses-related_courses ul{
+    display: flex;
+}
+
+.CADD-courses-related_courses ul li span{
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(237, 28, 36);
+    border-radius: 3px;
+}
+
+.CADD-courses-related_courses ul li span:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    text-emphasis-color: white;
+}
+
+
+
+@media(max-width:700px){
+    .CADD-courses-section-1{
+        width: 100%;
+    }
+    .CADD-courses-section-2{
+        width: 100%;
+    }
+    .CADD-courses-flex{
+        flex-wrap: wrap;
+    }
+    .CADD-courses-section-3{
+        grid-template-columns: 100%;
+    }
+}

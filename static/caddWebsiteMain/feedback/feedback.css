@@ -1,0 +1,130 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+input[type=radio]{
+display: none;
+}
+
+input[type=radio]+.box{
+    background-color: #FFFAFA	;
+}
+
+input[type=radio]+.box label{
+    cursor: pointer;
+}
+
+input[type=radio]:checked+.box{
+    background-color: red	;
+}
+
+.cadd-feedback-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin:20px 0px;
+    width: 100%;
+}
+
+.cadd-feedback-comment{
+    margin: 40px 50px;
+    text-align: center;
+}
+
+.cadd-feedback-content{
+    background-color: white;
+    padding: 10px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    
+}
+
+.cadd-feedback-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
+    
+}
+
+.cadd-feedback-exp{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.cadd-feedback-query{
+    margin-bottom: 10px;
+}
+
+.cadd-feedback-flex img{
+    display: block;
+    width: 70px;
+    margin: 20px 30px;
+
+}
+
+.cadd-feedback-flex .box .emote{
+    text-align: center;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+
+.cadd-feedback-flex .box{
+    
+    /* background-color: #FFFAFA	; */
+    margin: 10px 10px;
+    border-radius: 5px;
+  
+    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;}
+
+hr{
+    margin:25px 0;
+    color: rgb(229, 231, 235);
+    border-top-width: 1px;
+}
+
+button{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+@media(max-width:778px){
+    .cadd-feedback-content{
+        max-width: 500px;
+    }
+    .cadd-feedback-flex img{
+        width: 20px ;
+    }
+}
+
+@media(max-width:525px){
+    .cadd-feedback-content{
+        max-width: 350px;
+    }
+    .cadd-feedback-flex img{
+        width: 15px ;
+        margin: 10px 10px;
+    }
+
+    .cadd-feedback-flex .box .emote{
+        font-size: 10px;
+    }
+}
+

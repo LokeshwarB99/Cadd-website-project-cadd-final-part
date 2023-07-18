@@ -1,0 +1,404 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --padding-left-right: 15px;
+}
+#cadd-description .banner {
+  display: flex;
+  justify-content: center;
+}
+#cadd-description .banner img {
+  width: 100%;
+}
+#cadd-description .whycadd-description h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: var(--dark);
+  border-left: 5px solid var(--red);
+  padding-left: 30px;
+}
+#cadd-description .whycadd-description p {
+  font-size: 19px;
+  padding: 60px 0px;
+  font-family: "Poppins", sans-serif;
+}
+#cadd-description .whycadd-description {
+  /* height: 100vh; */
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#cadd-description .whycadd-description p a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+}
+/* #cadd-description .world-class-division{
+  height: 1000px;
+} */
+#cadd-description .world-class-division .cadd-achievement-content-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 6%;
+}
+#cadd-description .world-class-division h1 {
+  text-align: center;
+  color: var(--red);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+}
+#cadd-description .world-class-division .cadd-achievement-content-box h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: var(--font-family-sans-serif); */
+  color: var(--red);
+}
+#cadd-description .world-class-division .cadd-achievement-content-box p {
+  font-size: 2rem;
+  font-family: var(--font-family-sans-serif);
+  color: var(--gray);
+}
+#cadd-description
+  .world-class-division
+  .cadd-achievement-content-box:nth-child(n) {
+  text-align: center;
+  /* border-left:2px solid var(--red); */
+}
+
+#cadd-description
+  .world-class-division
+  .cadd-achievement-content-box
+  .content-box {
+  border-left: 2px solid red;
+  /* padding: 200px; */
+}
+.testimonial {
+  background-color: rgb(248, 248, 248);
+  margin-bottom: 10px;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.testimonial .content .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testimonial-title {
+  padding: 28px;
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  color: rgb(237, 28, 36);
+}
+
+.testimonial-title-1 {
+  font-size: 25px;
+  font-weight: 100;
+  color: rgb(237, 28, 36);
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.box1 {
+  margin: auto;
+  width: 50%;
+}
+
+.box2 {
+  width: 50%;
+}
+
+.box1 p {
+  font-size: 13px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: Roboto, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.box2 a:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.yts {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 815px) {
+  .box {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+#cadd-card-slider {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "MyriadPro-Regular_1", sans-serif;
+}
+#cadd-card-slider h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--red);
+  padding-top: 10px;
+}
+#cadd-card-slider .grid-card {
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* grid-template-rows:  20%;/ */
+}
+#cadd-card-slider .card {
+  position: relative;
+  width: 323px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  /* border: 2px var(--gray); */
+}
+#cadd-card-slider .card h2 {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: Roboto, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+#cadd-card-slider .card img {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#cadd-card-slider .card p {
+  font-size: 1rem;
+  padding: 0px 5px;
+  text-align: center;
+  font-weight: 300;
+  font-family: "poppins", sans-serif;
+  /* padding-top: 20px; */
+}
+#cadd-card-slider .card .cadd-card-short-details {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#cadd-card-slider .card .cadd-card-short-details span {
+  color: white;
+  background: var(--red);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 10px;
+  border: 3px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 24px;
+}
+#cadd-card-slider .card .cadd-card-short-details span img {
+  width: 15px;
+}
+#cadd-card-slider .card p span {
+  color: var(--red);
+  font-weight: bolder;
+}
+
+#cadd-card-slider .card button {
+  background: var(--red);
+  font-size: 1rem;
+  height: 10%;
+  width: 35%;
+  border-radius: 5px;
+  color: var(--white);
+  margin: 20px;
+  cursor: pointer;
+}
+#cadd-card-slider .card button a {
+  text-decoration: none;
+  color: var(--white);
+}
+.cadd-our-courses-hero {
+  height: 250vh;
+}
+.cadd-our-courses-hero img {
+  width: 100%;
+  min-height: 50vh;
+}
+
+.cadd-our-courses-hero h1 {
+  font-family: "MyriadPro-Regular_1", sans-serif;
+  color: var(--red);
+  padding: 4% 0 0 15%;
+  font-size: 37px;
+  font-weight: 400;
+}
+
+.cadd-our-courses-hero .cadd-courses-list ul {
+  /* padding: 5px 15px; */
+  padding: 30px 10%;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.cadd-our-courses-hero .cadd-courses-list ul li {
+  list-style: none;
+  padding: 5px 10px;
+  margin: 10px -10px;
+  background: #f5f5f5;
+  margin-left: 15px;
+  border-radius: 5px;
+  height: 35px;
+  width: auto;
+  float: left;
+  font-size: 17px;
+  color: var(--dark);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cadd-our-courses-hero .cadd-courses-list ul li:hover {
+  background: var(--red);
+  color: var(--white);
+}
+.cadd-our-courses-hero .cadd-courses-list ul .active {
+  background: var(--red);
+  color: var(--white);
+}
+.cadd-our-courses-hero .cadd-courses-description {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cadd-our-courses-hero .cadd-courses-description p {
+  /* display: inline-block; */
+  padding: 30px 15% 0px 15%;
+  font-size: 1.1rem;
+  color: var(--gray);
+  /* width: 100%; */
+}
+.cadd-our-courses-hero .cadd-courses-description span {
+  color: var(--red);
+  font-size: 1.2rem;
+}
+.cadd-our-courses-hero .cadd-courses-description .read-more-btn a {
+  margin: 0px 150px;
+  font-size: 0.85em;
+  color: var(--white);
+  background: black;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 15%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.cadd-our-courses-hero .cadd-courses-description .read-more-btn a:hover {
+  background: var(--red);
+}
+
+.cadd-our-courses-hero .cadd-courses-description .our-courses-pictures {
+  display: grid;
+  grid-template-rows: max(200px) 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px 200px;
+
+  border-radius: 5px;
+  margin: 50px 200px 50px 15%;
+  justify-content: space-between;
+}
+
+.cadd-our-courses-hero .cadd-courses-description .our-courses-pictures img {
+  /* margin:30px; */
+  border: 2px solid #e5e7eb;
+  margin: 20px 0px;
+  width: 100%;
+  min-height: 50%;
+
+  /* min-height: 20%; */
+}
+.cadd-our-courses-hero .cadd-courses-description .our-courses-pictures .pic {
+  border-radius: 5px;
+  /* position: relative; */
+  /* padding:0px 50px; */
+}
+.cadd-our-courses-hero .cadd-courses-description .our-courses-pictures .pic h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--gray);
+  left: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  #cadd-description .world-class-division .cadd-achievement-content-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  #cadd-description
+    .world-class-division
+    .cadd-achievement-content-box
+    .content-box {
+    padding-bottom: 17px;
+    border-left: 0px solid white;
+    border-bottom: 2px solid red;
+    width: 70%;
+  }
+  #cadd-description
+    .world-class-division
+    .cadd-achievement-content-box
+    .content-box-1 {
+    padding-bottom: 17px;
+    width: 70%;
+    border-bottom: 2px solid red;
+  }
+}

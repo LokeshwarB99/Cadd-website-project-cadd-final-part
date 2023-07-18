@@ -1,0 +1,69 @@
+<footer class="cadd-footer-footer">
+    <div class="cadd-footer-container">
+       <div class="cadd-footer-row">
+            <div class="cadd-footer-footer-col">
+                 <h4>Company</h4>
+                 <ul>
+                     <li><a href="/about">About Us</a></li>
+                     <li><a href="/placement">Placements</a></li>
+                     <li><a href="https://caddcentre.com/blog/">Blog</a></li>
+                     <li><a href="/privacypolicy">Privacy Policy</a></li>
+                     <li><a href="/contactUs">Contact Us</a></li>
+                     <li><a href="/feedback">Feedback</a></li>
+                     <li><a href="/jobfair">Job Fair</a></li>
+                     
+                 </ul>
+            </div>
+            <div class="cadd-footer-footer-col">
+                 <h4>Community & Events</h4>
+                 <ul>
+                     <li><a href="/etc">Engineering, Technology & Careers (ETC)</a></li>
+                     <li><a href="/student-value-adds">Student-Value-Adds</a></li>
+                 </ul>
+                 <h4 style="margin-top: 20px;">Certifications</h4>
+                 <ul>
+                    {% for obj in certificateCourses.core_set.all %}
+                     <li><a href="/course/{{certificateCourses.courseGroupSlug}}/{{obj.coreSlug}}">{{obj.coreName}}</a></li>
+                     <!-- <li><a href="#">Advance Certificate</a></li>
+                     <li><a href="#">Masters Certificate</a></li>
+                     <li><a href="#">Expert Certificate</a></li> -->
+                    {% endfor %}
+                 </ul>
+            </div>
+            <div class="cadd-footer-footer-col">
+                 <h4>Hybrid Courses</h4>
+                 <ul>
+                    {% for obj in hybridCourses.module_set.all %}
+                     <li><a href="/course/{{hybridCourses.courseGroupSlug}}/{{obj.moduleSlug}}">{{obj.moduleName}}</a></li>
+                     <!-- <li><a href="#">CATIA Kinematics</a></li>
+                     <li><a href="#">Hypermesh</a></li>
+                     <li><a href="#">Autodesk Inventor</a></li>
+                     <li><a href="#">Mastercam</a></li>
+                     <li><a href="#">NX CAM</a></li>
+                     <li><a href="#">PDMS</a></li>
+                     <li><a href="#">GD&T</a></li>
+                     <li><a href="#">3D Printing</a></li>
+                     <li><a href="#">Microstation</a></li>
+                     <li><a href="#">NX NASTRAN</a></li>
+                     <li><a href="#">MX ROAD</a></li>
+                     <li><a href="#">ANSYS Fluent</a></li> -->
+                     {% endfor %}
+                 </ul>
+             </div>
+             <div class="cadd-footer-footer-col cadd-footer-contact">
+                 <h4>Get in touch</h4>
+                 <ul class="cadd-footer-grid">
+                     <li><a href="{{caddBasicDetails.instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                     <li><a href="{{caddBasicDetails.facebook}}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+                     <li><a href="tel:{{caddBasicDetails.phoneNumber}}"><i class="fa-solid fa-phone"></i></i></a></li>
+                     <li><a href="{{caddBasicDetails.youtube}}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                 </ul>
+                 
+             </div>
+       </div>
+    </div>
+ </footer>
+ <div class="cadd-footer-footer-last">
+     <p>Copyright © 2023 <a href="https://www.cadd.net.in/">CADD Centre.</a> All Rights Reserved.</p>
+     
+ </div>

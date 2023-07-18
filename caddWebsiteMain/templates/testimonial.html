@@ -1,0 +1,212 @@
+
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/testimonial/testimonial.css' %}">
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+    <img class="image" src="/media/caddWebsiteMain/testimonial/testimonials.jpg" alt="" srcset="">
+    <div class="heading-txt">
+      Testimonials
+    </div>
+
+    <div class="container" style="width: 100%;">
+      <div class="quote">
+        <div class="content">
+        Testimonials describe what has been, and are a promise of what is to come.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="rm-space"></div>
+      <div class="subheading-txt">
+        Student Reviews
+      </div>
+
+    {% for obj in objects %}
+    <div class="testimonial">
+      <div class="avatar">
+        {{obj.studentName.0}}
+      </div>
+      <div class="info">
+        <div class="name">{{obj.studentName}}</div>
+        <div class="rating">
+          {% with ''|center:obj.ratings as range %}
+          {% for _ in range %} 
+          ★
+          {% endfor %} 
+          {% endwith %}
+        </div>
+      </div>
+      <div class="content">
+        <p>{{obj.feedback}}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- <div class="testimonial">
+      <div class="avatar">
+        K
+      </div>
+      <div class="info">
+        <div class="name">Keerthana Anandavalli</div>
+        <div class="rating">★★★★</div>
+      </div>
+      <div class="content">
+        <p>I had a great experience at the cadd centre. The faculties are very supportive and motivating. The class timings are flexible. The study material given was very useful.
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="avatar">
+        M
+      </div>
+      <div class="info">
+        <div class="name">
+          Mani Maran</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>Dear Mam/Sir,I am R.Mani Maran, I have studied in Cadd Center (Anna Nagar). It is with great [honor/delight] and appreciation that I thank you for the job offer received from your side, for the Cadd job in Swathi Engineering Agencies.</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        S
+      </div>
+      <div class="info">
+        <div class="name">
+          Surya Latha</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>Very good teaching professional and nice interior</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        S
+      </div>
+      <div class="info">
+        <div class="name">Shikhil Devan</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>Perfect for any beginner interested in design field..Patient teachers with immense knowledge Had a pleasant learning experience!!. Appreciate the everhelping nature of the staff!!.kudos to the team</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        D
+      </div>
+      <div class="info">
+        <div class="name">Dilip Kumar</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>I am doing my revit MEP and electrical cad course in porur . Its a great place to study cadd course with friendly staff. teaching is too good. Its very good</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        R
+      </div>
+      <div class="info">
+        <div class="name">
+          Rathna Priya</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>I am doing my civil softwares...In porur cadd i am happy to learn these courses under the excellence of teaching and infrastructure...</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        S
+      </div>
+      <div class="info">
+        <div class="name">
+          Saravanan Siva Subramaniyan</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>I'm a electrical engineering 2015 passedout... I have done Revit MEP and Navis work course... Thanks for the wonderful training and I'm placed with ceebros</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        A
+      </div>
+      <div class="info">
+        <div class="name">
+          Atul Antony</div>
+        <div class="rating">★★★★☆</div>
+      </div>
+      <div class="content">
+        <p>I am a student of cadd centre ,vadapalani.The course helped me to understand autocad with ease.The faculty helped to clear all my doubts and made the topics easy to follow.</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        S
+      </div>
+      <div class="info">
+        <div class="name">
+          Solanki Patwari</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>I am doing courses past a year classes are goings on well and best faculties teaching in a friendly n most innovative way. The staffs are worm welcoming.</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        D
+      </div>
+      <div class="info">
+        <div class="name">Divish</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>One of the fabulous training centre i have seen in Chennai. Most experience training faculty good practical and technical knowledge. I have grown up my skills by their way of teaching as it is useful for me</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="avatar">
+        J
+      </div>
+      <div class="info">
+        <div class="name">
+          Jagan Mithran</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="content">
+        <p>Classes are good in Aminjikarai centre. Was able to make more friends here. Overall good experience</p>
+      </div>
+    </div> -->
+  </div>
+
+{% endblock %}
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

@@ -1,0 +1,229 @@
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="{% static 'caddWebsiteMain/placement/placement.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        
+
+        <img src="{{advertisements.0.banner.url}}" class="cadd-placement-main-img" alt="">
+    </div>
+    <div class="cadd-placement-content">
+        <div class="cadd-placement-service-box">
+            <h2>Placement Services</h2>
+            <p>Our mission is to create opportunities for employment and career growth for our students. In partnership with National Skill Development Corporation (NSDC), we strive to contribute to enhancing the employability of students. In the past three decades, we have trained about 2 million students and got them placed in organisations across 40 plus countries.</p>
+            <p class="cadd-placement-apply"><a href="/contactUs" style="color: #e31e24;">Apply Now</a></p>
+        </div>
+        <div class="cadd-placement-grid">
+            <div class="cadd-placement-b1 cadd-placement-box-1">
+                <div>
+                    <img class="cadd-placement-w-8" src="	https://caddcentre.com/assets/images/placement/gratuated.png" alt="cadd-stu">
+                </div>
+                <div>
+                    <h4>2 Million</h4>
+                    <p class="cadd-placement-para">Students trained</p>
+                </div>
+            </div>
+            <div class="cadd-placement-b1 cadd-placement-box-1">
+                <div>
+                    <img class="cadd-placement-w-8" src="	https://caddcentre.com/assets/images/placement/job.png" alt="cadd-job">
+                </div>
+                <div>
+                    <h4>Job Fair</h4>
+                    <p class="cadd-placement-para">in Multi-cities</p>
+                </div>
+            </div>
+        </div>
+        <div class="cadd-placement-b1">
+            <div>
+                <img class="cadd-placement-w-8" src="	https://caddcentre.com/assets/images/placement/coronovirus.png" alt="cadd-40+">
+            </div>
+            <div>
+                <h4>
+                    40+ Countries</h4>
+                <p class="cadd-placement-para">Students Employed</p>
+            </div>
+        </div>
+        <div class="cadd-placement-b1">
+            <div>
+                <img class="cadd-placement-w-8" src="https://caddcentre.com/assets/images/placement/job-search.png" alt="cadd-jobsearch">
+            </div>
+            <div>
+                <h4>1000+</h4>
+                <p class="cadd-placement-para">Job Openings</p>
+            </div>
+        </div>
+        <h2 class="cadd-placement-placed">Placement Assistance</h2>
+        <div class="cadd-placement-section-2 cadd-placement-flex">
+            <div class="cadd-placement-job-market">
+                <h2 class="cadd-placement-job-placement">Job Market and Placement Process</h2>
+                <p><b>'Gainful employment' </b>is our watchword. We help our students find jobs that are well-paid, meaningful, and challenging. We track companies that are hiring, and display job offers at our placement portal. We group them under different categories based on their implicit and explicit skill needs.</p>
+                <p><i>We take ownership in assessing students
+                    and matching them with the right jobs.</i></p>
+                <img class="cadd-placement-caddjob-img" src="https://caddcentre.com/assets/images/placement/job-market.png" alt="cadd-jobmarket">    
+            </div>
+            <div class="cadd-placement-process-flow">
+                <h2 class="cadd-placement-boarding">On-boarding Process-flow</h2>
+                <img class="cadd-placement-processflow-img" src="https://caddcentre.com/assets/images/placement/pre-vector.png" alt="boardprocessflow">
+            </div>
+        </div>
+        <div class="cadd-placement-section-3">
+            <div class="cadd-placement-client-testimonial">
+                <h2>CADD CENTRE - Client Testimonials
+                </h2>
+                <img src="https://caddcentre.com/assets/images/placement/thumpnail.jpeg" alt="client" class="cadd-placement-client-speaks">
+                <i class="cadd-placement-comment"></i> <b>"</b> The pursuit of quality and 
+                    excellence has always been the hallmark of CADD Centre which now has gone past 30 years and counting <b>"</b>
+                <div class="cadd-placement-soc-media">
+                    <i class="cadd-placement-connect">connect with us: </i>
+                    <i class="fa-brands fa-facebook-f f"></i>
+                    <i class="fa-brands fa-linkedin-in f"></i>
+                </div>
+            </div>
+            <div class="cadd-placement-container-form">
+                <img src="/media/advertisements/1686997089_fjp-mumbai.jpg" alt="">
+                <!-- <h3 class="cadd-placement-apply-now" >Apply Now. Hire Talent</h3>
+                <form>
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Name" >
+                    </label>
+                    <label for="mobile">
+                        <input type="tel" name="tel" id="mobile" placeholder="Mobile" >
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Email" >
+                    </label>
+                    <label for="company">
+                        <input type="text" name="comp" id="company" placeholder="Company Name">
+                    </label>
+                    <label for="vacancy">
+                        <input type="number" placeholder="No of vacancies" name="num" id="vacancy">
+                    </label>
+                    <div> 
+                        <h6>CAPTCHA</h6>
+                    </div>
+                    <button>Submit</button>
+                </form> -->
+            </div>
+        </div>
+    {% if totalObject >= 1 %}
+        <!-- <h2 class="cadd-placement-placed" style="font-style: normal;font-size: 24px;margin-top: 20px;">Job Opportunities</h2>
+        <div class="cadd-placement-job-opportunities">
+            <span style="display: inline; font-style: normal;font-size: small;margin-right: 5px;">Filter By</span>
+            <select name="category" class="cadd-placement-select" id="placementCategory">
+                <option value="">All Category</option>
+                <option value="Internship">Internship</option>
+                <option value="Job">Job</option>
+                {% for obj in categoryObjects %}
+                    <option value="{{obj.category}}">{{obj.category}}</option>
+                {% endfor %}
+            </select>
+            <select name="department" id="placementDepartment" class="cadd-placement-select">
+                <option value="">All Department</option>
+                <option value="2">Civil</option>
+                <option value="3">Architectural</option>
+                <option value="4">Transportation</option>
+                <option value="5">Product Design</option>
+                <option value="6">Structural</option>
+                <option value="7">Aeronautical</option>
+                <option value="8">Automotive</option>
+                <option value="9">Data Science</option>
+                <option value="10">Electrical</option>
+                <option value="11">Any</option> 
+                {% for obj in educationObjects %} 
+                    <option value="{{obj.education}}">{{obj.education}}</option>
+                {% endfor %} 
+            </select>
+            <select name="location" class="cadd-placement-select" id="placementLocation">
+                <option value="">All Location</option>
+                {% for obj in locationObjects %} 
+                    <option value="{{obj.mainLocation}}">{{obj.mainLocation}}</option>
+                {% endfor %}
+                    <option value="Chennai">Chennai</option><option value="Mumbai">Mumbai</option><option value="Maharashtra">Maharashtra</option><option value="Delhi">Delhi</option><option value="Hubli">Hubli</option><option value="Sriperumbadur">Sriperumbadur</option><option value="Ahmadabad / Bangalore ">Ahmadabad / Bangalore </option><option value="Bengaluru">Bengaluru</option><option value="Hyderabad">Hyderabad</option><option value="Coimbatore">Coimbatore</option><option value="Perungudi">Perungudi</option><option value="Madurai">Madurai</option><option value="Chetpet, Chennai">Chetpet, Chennai</option><option value="Mylapore, Chennai">Mylapore, Chennai</option><option value="Ambattur, Chennai">Ambattur, Chennai</option><option value="Thuraipakkam">Thuraipakkam</option><option value="Egattur">Egattur</option><option value="OMR">OMR</option><option value="Medavakkam, Chennai">Medavakkam, Chennai</option><option value="Anna Nagar, Chennai">Anna Nagar, Chennai</option><option value="Kotturpuram, Chennai">Kotturpuram, Chennai</option><option value="Velachery, Chennai">Velachery, Chennai</option><option value="Thirumazhisai">Thirumazhisai</option><option value="Porur, Chennai">Porur, Chennai</option><option value="Adyar, Chennai">Adyar, Chennai</option><option value="ECR">ECR</option><option value="Kilpauk, Chennai">Kilpauk, Chennai</option><option value="Mumbai / Bengaluru">Mumbai / Bengaluru</option><option value="Thanjavur">Thanjavur</option><option value="Thiruvallur">Thiruvallur</option><option value="Calicut">Calicut</option><option value="Kochi">Kochi</option><option value="Karur">Karur</option><option value="Kangeyam">Kangeyam</option><option value="West Bengal">West Bengal</option><option value="Gujarat">Gujarat</option><option value="Nagpur">Nagpur</option><option value="Kolkata">Kolkata</option><option value="Pollachi">Pollachi</option><option value="Andheri, Mumbai">Andheri, Mumbai</option><option value="Thane, Mumbai">Thane, Mumbai</option><option value="Ambernath / Thane, Mumbai">Ambernath / Thane, Mumbai</option><option value="Pune">Pune</option><option value="Madhya Pradesh">Madhya Pradesh</option><option value="Tiruvallur">Tiruvallur</option><option value="Bhosari">Bhosari</option><option value="Aurangabad">Aurangabad</option><option value="Tirupur">Tirupur</option><option value="Wakad, Pune">Wakad, Pune</option><option value="Pirangut - Pune">Pirangut - Pune</option><option value="Koreogaon- Pune">Koreogaon- Pune</option><option value="Warje- Pune">Warje- Pune</option><option value="Wakad - Pune">Wakad - Pune</option><option value="Bhosari -Pune">Bhosari -Pune</option><option value="Chinchwad - Pune">Chinchwad - Pune</option><option value="Sahakarnagar-Pune">Sahakarnagar-Pune</option><option value="Wakdewadi-Pune">Wakdewadi-Pune</option><option value="Chinchwad- Pune">Chinchwad- Pune</option><option value="Bhosale Nagar-Pune">Bhosale Nagar-Pune</option><option value="Karvenagar-Pune">Karvenagar-Pune</option><option value="Hadapsar-Pune">Hadapsar-Pune</option><option value="Pune-Near-RTO">Pune-Near-RTO</option><option value="Ahmednagar">Ahmednagar</option><option value="Bhosari-Pune">Bhosari-Pune</option><option value="Kothrud-Pune">Kothrud-Pune</option><option value="Baner-Pune">Baner-Pune</option><option value="Shikrapur-Pune">Shikrapur-Pune</option><option value="Bavdhan-Pune">Bavdhan-Pune</option><option value="Wakad-Pune">Wakad-Pune</option><option value="Navi Mumbai">Navi Mumbai</option><option value="Shivajinagar-Pune">Shivajinagar-Pune</option><option value="Ambegaon-Pune">Ambegaon-Pune</option><option value="Balewadi-Pune">Balewadi-Pune</option><option value="Chakan-Pune">Chakan-Pune</option><option value="Model Colony-Pune">Model Colony-Pune</option><option value="Sinnar-Nashik">Sinnar-Nashik</option><option value="Redhills, near kanniyamman koil">Redhills, near kanniyamman koil</option><option value="Aminjikarai- Chennai">Aminjikarai- Chennai</option><option value="Koyembedu- Chennai">Koyembedu- Chennai</option><option value="Ayanampakkam-Chennai">Ayanampakkam-Chennai</option><option value="K.K. nagar-Chennai">K.K. nagar-Chennai</option><option value="Banjara hills, Hyderabad">Banjara hills, Hyderabad</option><option value="Madhapur, Hyderabad">Madhapur, Hyderabad</option><option value="Thiruvarur, Chennai">Thiruvarur, Chennai</option><option value="Agaram main road, Chennai">Agaram main road, Chennai</option><option value="Vasai, Mumbai">Vasai, Mumbai</option><option value="Vaile Parle west, Mumbai">Vaile Parle west, Mumbai</option><option value="Dahisar, Mumbai">Dahisar, Mumbai</option><option value="Nahur, Bhandup-mumbai">Nahur, Bhandup-mumbai</option><option value="Kandivali, Mumbai">Kandivali, Mumbai</option><option value="Vasai plant, mumbai">Vasai plant, mumbai</option><option value="Andheri west, Mumbai">Andheri west, Mumbai</option><option value="Bhandup / LBS Marg, Mumbai">Bhandup / LBS Marg, Mumbai</option><option value="Santacruz west, Mumbai">Santacruz west, Mumbai</option><option value="Khopoli, Mumbai">Khopoli, Mumbai</option><option value="Grand Road,  Mumbai">Grand Road,  Mumbai</option><option value="Kirti Nagar, Delhi">Kirti Nagar, Delhi</option><option value="Parel, Mumbai">Parel, Mumbai</option><option value="kalyan west, Mumbai">kalyan west, Mumbai</option><option value="Chembur, Mumbai">Chembur, Mumbai</option><option value="CST Mumbai">CST Mumbai</option><option value="Borivali east">Borivali east</option><option value="Goregaon, Mumbai">Goregaon, Mumbai</option><option value="Rabale, Navi Mumbai">Rabale, Navi Mumbai</option><option value="Kurla, Mumbai">Kurla, Mumbai</option><option value="Santacruz, Mumbai">Santacruz, Mumbai</option><option value="Patalganga, Mumbai">Patalganga, Mumbai</option><option value="Kanjunmarg, Mumbai">Kanjunmarg, Mumbai</option><option value="Andheri east, Mumbai">Andheri east, Mumbai</option><option value="Vikhroli, Mumbai">Vikhroli, Mumbai</option><option value="Sakinaka Andheri, Mumbai">Sakinaka Andheri, Mumbai</option><option value="Marin Lines">Marin Lines</option><option value="Thane, Wagle Industry, mumbai">Thane, Wagle Industry, mumbai</option><option value="Andheri kurla road,mumbai">Andheri kurla road,mumbai</option><option value="Vile parle east, mumbai">Vile parle east, mumbai</option><option value="Lower parel, mumbai">Lower parel, mumbai</option><option value="Govandi, Mumbai">Govandi, Mumbai</option><option value="Borivali east, mumbai">Borivali east, mumbai</option><option value="marol, Andheri east, Mumbai">marol, Andheri east, Mumbai</option><option value="CBD Belapur">CBD Belapur</option><option value="Andheri Sakinaka, mumbai">Andheri Sakinaka, mumbai</option><option value="Sakinaka Andheri">Sakinaka Andheri</option><option value="Malad, mumbai">Malad, mumbai</option><option value="Pune -Chakan">Pune -Chakan</option><option value="Pune-Kothrud">Pune-Kothrud</option><option value="Bangalore">Bangalore</option><option value="Pune-Aundh">Pune-Aundh</option><option value="Kolhapur-pune">Kolhapur-pune</option><option value="Pune-Bhosari">Pune-Bhosari</option><option value="Pune -Talegaon">Pune -Talegaon</option><option value="Pimple Saudagar, Pune">Pimple Saudagar, Pune</option><option value="Pune -Erandwane">Pune -Erandwane</option><option value="Pune -Baner">Pune -Baner</option><option value="Pune -Warje">Pune -Warje</option><option value="Pune -Vimannagar">Pune -Vimannagar</option><option value="Pune-Hadapsar">Pune-Hadapsar</option><option value="Pune -Balewadi">Pune -Balewadi</option><option value="Pune-Baner">Pune-Baner</option><option value="Satara Road, Pune">Satara Road, Pune</option><option value="Bavdhan, pune">Bavdhan, pune</option><option value="Kothrud, Pune">Kothrud, Pune</option><option value="Shivane-Pune">Shivane-Pune</option><option value="Kerala">Kerala</option><option value="Trichur">Trichur</option><option value="Surat">Surat</option><option value="Kolkatta">Kolkatta</option><option value="Uttar Pradesh">Uttar Pradesh</option><option value="Kothrud- Pune">Kothrud- Pune</option><option value="Baner, Pune">Baner, Pune</option><option value="Ghorpadi, Pune">Ghorpadi, Pune</option><option value="Talwade, pune">Talwade, pune</option><option value="Aurangabad, pune">Aurangabad, pune</option><option value="Warje, pune">Warje, pune</option><option value="Hinjewadi, Pune">Hinjewadi, Pune</option><option value="Deccan, Pune">Deccan, Pune</option><option value="Talegaon, Pune">Talegaon, Pune</option><option value="Erode">Erode</option><option value="Ernakulam">Ernakulam</option><option value="Pune-Kharadi / Vimanagar">Pune-Kharadi / Vimanagar</option><option value="Pune- Koregaon Bhima">Pune- Koregaon Bhima</option><option value="Chakan, Pune">Chakan, Pune</option><option value="Chandigarh">Chandigarh</option><option value="Chinchwad-Pune">Chinchwad-Pune</option><option value="Alandi Road, Pune">Alandi Road, Pune</option><option value="Pune-Vimannagar / Ranjangaon">Pune-Vimannagar / Ranjangaon</option><option value="Tirunelveli">Tirunelveli</option><option value="Thiruvandram">Thiruvandram</option><option value="Vasai">Vasai</option><option value="Andheri">Andheri</option><option value="Kalyan">Kalyan</option><option value="Kalamboli, Navi Mumbai">Kalamboli, Navi Mumbai</option><option value="Dombivali">Dombivali</option><option value="Ulhasnagar">Ulhasnagar</option><option value="Ambernath">Ambernath</option><option value="Ranjangaon, Mumbai">Ranjangaon, Mumbai</option><option value="Kondhwa, Pune">Kondhwa, Pune</option><option value="Maval, pune">Maval, pune</option><option value="Jaipur, Gujarat">Jaipur, Gujarat</option><option value="Haryana">Haryana</option><option value="Jharkand">Jharkand</option><option value="Indore">Indore</option><option value="Kasarwadi, Pune">Kasarwadi, Pune</option><option value="Kochi,">Kochi,</option><option value="Maharastra">Maharastra</option><option value="Ahmedabad">Ahmedabad</option><option value="Chennai, Hyderabad, Bangalore, Pune">Chennai, Hyderabad, Bangalore, Pune</option><option value="Chikali, pune">Chikali, pune</option><option value="Kolhapur">Kolhapur</option><option value="Ratnagiri">Ratnagiri</option><option value="omalur, Tamilnadu">omalur, Tamilnadu</option><option value="Tiruppur">Tiruppur</option><option value="JP nagar, Bangalore">JP nagar, Bangalore</option><option value="Ambegaon -Pune">Ambegaon -Pune</option><option value="Sriperumbudur, Chennai">Sriperumbudur, Chennai</option><option value="pune station">pune station</option><option value="Pimpri, Pune">Pimpri, Pune</option><option value="Bhor, pune">Bhor, pune</option><option value="Ahmedabad, pune">Ahmedabad, pune</option><option value="Bhosari, pune">Bhosari, pune</option><option value="Akurdi, Pune">Akurdi, Pune</option><option value="shivane, Pune">shivane, Pune</option><option value="Mundhwa">Mundhwa</option><option value="Hadapsar, pune">Hadapsar, pune</option><option value="Pirangut, Pune">Pirangut, Pune</option><option value="Pune or Mumbai">Pune or Mumbai</option>
+            </select>
+        </div> -->
+        <!-- <div class="cadd-placement-all-jobs">
+            {% for obj in object %}
+            <div class="cadd-placement-boxes">
+                <div class="cadd-placement-box-flex">
+                    <p>{{obj.jobRole}}</p>
+                    <img src="{{obj.companyLogo.url}}" alt="neolite" width="50px">
+                </div>
+                <div class="cadd-placement-loc">
+                    <img src="	https://caddcentre.com/assets/images/placement/opportunities-icons/location.svg" width="10px" style="margin-right: 5px;" alt="map">
+                    <p>{{obj.location}}</p>
+                </div>
+                <div class="cadd-placement-sal-last">
+                    <div class="cadd-placement-sal">
+                        <img src="	https://caddcentre.com/assets/images/placement/opportunities-icons/salary.svg" alt="salary" width="15px" style="margin-right: 5px;">
+                        <p><b>Salary</b>: {{obj.salary}}</p>
+                    </div>
+                    <div class="cadd-placement-last">
+                        <img src="https://caddcentre.com/assets/images/placement/opportunities-icons/calendar.svg" alt="calendar" width="15px" style="margin-right: 5px;">
+                        <p><b>Last date</b>: {{obj.lastDate}}</p>
+                    </div>
+                </div>
+                <div class="cadd-placement-sal-last">
+                    <div class="cadd-placement-sal">
+                        <img src="https://caddcentre.com/assets/images/placement/opportunities-icons/job.svg" alt="salary" width="15px" style="margin-right: 5px;">
+                        <p><b>Category</b>: {{obj.category}}</p>
+                    </div>
+                    <div class="cadd-placement-last">
+                        <img src="https://caddcentre.com/assets/images/placement/opportunities-icons/duration.svg" alt="calendar" width="15px" style="margin-right: 5px;">
+                        <p><b>Duration</b>: Permanent</p>
+                    </div>
+                </div>
+                <div class="cadd-placement-loc">
+                    <img src="	https://caddcentre.com/assets/images/placement/opportunities-icons/education.svg" width="15px" style="margin-right: 5px;" alt="map">
+                    <p><b>Education</b>: {{obj.education}}</p>
+                </div>
+                <div class="cadd-placement-loc">
+                    <img src="	https://caddcentre.com/assets/images/placement/opportunities-icons/key-requirements.svg" width="14px" style="margin-right: 5px;" alt="map">
+                    <p><b>Key requirements</b>:<br>{{obj.keyFeatures}}<span style="color:#e31e24;">Know more...</span></p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="cadd-placement-load-more">
+            <button id='placement-load-more-btn' style="background-color: #e31e24;" >Load More</button>
+        </div> -->
+        <div class="cadd-placement-job-fair-and-counselling">
+            <div class="cadd-placement-job-fair">
+                <h2 style="font-style: normal;margin-bottom: 15px;">Job Fair and Pre-employement Counselling</h2>
+                <p style="font-style: normal;font-size: 13px;">We conduct Job fairs exclusively for top hiring industrial sectors and regions, and enable companies and our students with relevant skill sets to meet. We also provide pre-employment counselling for specific jobs, and schedule interviews for the shortlisted candidates. We constantly innovate our systems and services to deliver on our promise related to gainful employment. We stay committed to creating training products and services that make students relevant for the job market of their time.</p>
+            </div>
+            <div class="cadd-placement-jobfair-img">
+                <img src="https://caddcentre.com/assets/images/placement/Jobpakka.png" alt="jobpakka">
+                <div>
+                    <button class="cadd-placement-pakka" style="background-color: #e31e24; margin: 20px;">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{totalObject|json_script:"jsonTotal"}}
+    {% endif %}
+{% endblock %}
+
+{% block linkjs %}
+    <script src="{% static 'caddWebsiteMain/placement/placement.js' %}"></script>
+{% endblock %}
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'caddWebsite/base.html' %} 
+
+{% load static %}
+
+{% block linkcss %}
+    <title>Document</title>
+  <link rel="stylesheet" href="{% static 'caddWebsiteMain/studentValueAdds/studentValueAdds.css' %}" />
+{% endblock %}
+
+  <script src="../cadd.js"></script>
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="page">
+    <img class="f" src="/media/caddWebsiteMain/studentValueAdds/student_corner_banner.jpg" alt="" />
+    <div class="hr-head"> Before you enroll </div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="thick-border">
+      <div class="thin-border">
+        <div class="cont-box-h">
+          <img class="icn" src="/media/caddWebsiteMain/studentValueAdds/centre_auth.svg" alt="">
+          <div class="h">
+            Ensure the centre is authorised
+          </div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+        </div>
+        <div class="cont-box-p">
+          <div class="p">
+            Look for an 'Authorisation Certificate' before you enrol and pay. Pay only as per prescribed course fee and
+            collect receipt
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="join-boxes" src="/media/caddWebsiteMain/studentValueAdds/join.svg" alt="">
+    <div class="thick-border">
+      <div class="thin-border">
+        <div class="cont-box-h">
+          <img class="icn" src="/media/caddWebsiteMain/studentValueAdds/id-card.svg" alt="">
+          <div class="h">
+            Importance of Student ID
+          </div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+        </div>
+        <div class="cont-box-p">
+          <div class="p">
+            Activate your student ID by clicking the link sent to your registered email. Use if for future
+            communication. Use it to validate your certification.
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="join-boxes" src="/media/caddWebsiteMain/studentValueAdds/join.svg" alt="">
+    <div class="thick-border">
+      <div class="thin-border">
+        <div class="cont-box-h">
+          <img class="icn" src="/media/caddWebsiteMain/studentValueAdds/courseware.svg" alt="">
+          <div class="h">
+            Courseware
+          </div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+          <div class="invis">.</div>
+        </div>
+        <div class="cont-box-p">
+          <div class="p" style="padding-left: 20px;">
+            Collect relevant CADD Centre's course materials from centre
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+
+    <div class="hr-head">World class training, world over</div>
+
+    <div class="feat-container">
+
+      <div class="feat">
+        <div class="feat-h">
+          2M+
+        </div>
+        <div class="feat-p">
+          Engineers and Professionals trained
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feat">
+        <div class="feat-h">
+          730
+        </div>
+        <div class="feat-p">
+          training centres - Asia's biggest network
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feat">
+        <div class="feat-h">
+          24
+        </div>
+        <div class="feat-p">
+          global locations
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feat">
+        <div class="feat-h">
+          100+
+        </div>
+        <div class="feat-p">
+          industry-ready courses
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+  </div>
+{% endblock %}
+
+{% block footer %} 
+{% include 'footer.html' %} 
+{% endblock %}
